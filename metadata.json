@@ -1,0 +1,6 @@
+{
+  "name": "PCSecure LLC",
+  "description": "Official web design, software development, and digital product sales platform for PCSecure.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
