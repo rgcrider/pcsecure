@@ -9,7 +9,41 @@
     <meta property="og:description" content="PCSecure designs and builds high-performing custom websites, e-commerce storefronts, web applications, and digital experiences that drive measurable business growth." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" type="image/jpeg" href="/src/assets/images/pcsecure_official_logo_1790448357448.jpg" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 160 170'%3E%3Cpath d='M80 6L38 24V74C38 108 55 138 80 152V6Z' fill='%23081735'/%3E%3Cpath d='M80 6L122 24V74C122 108 105 138 80 152V6Z' fill='%230073E6'/%3E%3Cpath d='M80 16L46 31V74C46 102 60 128 80 140C100 128 114 102 114 74V31L80 16Z' fill='%23FFFFFF'/%3E%3Cpath d='M52 38H76C81.5 38 86 42.5 86 48C86 53.5 81.5 58 76 58H60V76H52V38Z' fill='%23081735'/%3E%3C/svg%3E" />
+    <script>
+      /* Suppress third-party browser extension injection errors (e.g. MetaMask inpage.js) */
+      (function() {
+        function isExtensionError(err) {
+          if (!err) return false;
+          var str = (err.message || '') + ' ' + (err.stack || '') + ' ' + String(err);
+          return (
+            str.indexOf('chrome-extension://') !== -1 ||
+            str.indexOf('moz-extension://') !== -1 ||
+            str.indexOf('safari-extension://') !== -1 ||
+            str.indexOf('nkbihfbeogaeaoehlefnkodbefgpgknn') !== -1 ||
+            str.indexOf('MetaMask') !== -1 ||
+            str.indexOf('Failed to connect to MetaMask') !== -1 ||
+            str.indexOf('inpage.js') !== -1 ||
+            str.indexOf('evmAsk') !== -1
+          );
+        }
+
+        window.addEventListener('error', function(e) {
+          if (isExtensionError(e.error) || isExtensionError(e.message) || isExtensionError(e.filename)) {
+            e.stopImmediatePropagation();
+            e.preventDefault();
+            return true;
+          }
+        }, true);
+
+        window.addEventListener('unhandledrejection', function(e) {
+          if (isExtensionError(e.reason)) {
+            e.stopImmediatePropagation();
+            e.preventDefault();
+          }
+        }, true);
+      })();
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">

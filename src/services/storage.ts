@@ -1,5 +1,6 @@
 import { Product, CompanySettings } from '../types';
 import { INITIAL_PRODUCTS, INITIAL_COMPANY_SETTINGS } from '../data/initialData';
+import { resolveImageUrl } from '../data/imageAssets';
 
 const PRODUCTS_STORAGE_KEY = 'pcsecure_products_v1';
 const SETTINGS_STORAGE_KEY = 'pcsecure_settings_v1';
@@ -18,14 +19,19 @@ export function loadProducts(): Product[] {
       const existingSlugs = new Set(parsed.map((p: Product) => p.slug));
       const missingProducts = INITIAL_PRODUCTS.filter((p) => !existingSlugs.has(p.slug));
       let merged = missingProducts.length > 0 ? [...parsed, ...missingProducts] : [...parsed];
-      // Normalize support email to support@pcsecure.tech
+      // Normalize support email to support@pcsecure.tech and image URLs to online CDN
       let needsProductSave = false;
       merged = merged.map((p) => {
+        let updated = { ...p };
         if (p.supportEmail?.includes('pcsecure.online') || p.supportEmail?.includes('pcsecurellc.com')) {
           needsProductSave = true;
-          return { ...p, supportEmail: 'support@pcsecure.tech' };
+          updated.supportEmail = 'support@pcsecure.tech';
         }
-        return p;
+        if (p.imageUrl?.includes('/src/assets/images')) {
+          needsProductSave = true;
+          updated.imageUrl = resolveImageUrl(p.imageUrl);
+        }
+        return updated;
       });
       if (missingProducts.length > 0 || needsProductSave) {
         saveProducts(merged);

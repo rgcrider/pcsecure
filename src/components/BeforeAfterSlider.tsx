@@ -1,5 +1,6 @@
 import React, { useState, useRef, useCallback } from 'react';
 import { Sparkles, ArrowRight, Gauge, CheckCircle2, AlertTriangle } from 'lucide-react';
+import { APP_IMAGES } from '../data/imageAssets';
 
 export const BeforeAfterSlider: React.FC = () => {
   const [sliderPosition, setSliderPosition] = useState(50);
@@ -86,7 +87,7 @@ export const BeforeAfterSlider: React.FC = () => {
           {/* RIGHT LAYER: MODERN AFTER (PCSecure Redesign) */}
           <div className="absolute inset-0 w-full h-full bg-[#07172F]">
             <img
-              src="/src/assets/images/hero_web_design_1790447403727.jpg"
+              src={APP_IMAGES.heroWebDesign}
               alt="Modern PCSecure Website Redesign"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"

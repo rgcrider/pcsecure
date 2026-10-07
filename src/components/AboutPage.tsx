@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { CompanySettings, AppRoute } from '../types';
 import { BrandLogo } from './BrandLogo';
+import { APP_IMAGES } from '../data/imageAssets';
 
 interface AboutPageProps {
   settings: CompanySettings;
@@ -47,7 +48,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
         {/* Studio Process Visual */}
         <div className="rounded-2xl overflow-hidden border border-slate-200 aspect-[16/9] bg-slate-900">
           <img
-            src="/src/assets/images/agency_design_process_1790446924152.jpg"
+            src={APP_IMAGES.agencyProcess}
             alt="PCSecure Design and Engineering Studio"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"

@@ -25,6 +25,7 @@ import { ThankYouPage } from './components/ThankYouPage';
 import { AboutPage } from './components/AboutPage';
 import { ContactPage } from './components/ContactPage';
 import { LegalPage } from './components/LegalPage';
+import { SmsConsentPage } from './components/SmsConsentPage';
 import { AdminDashboard } from './components/AdminDashboard';
 import { ProjectInquiryModal } from './components/ProjectInquiryModal';
 import { AlertCircle } from 'lucide-react';
@@ -244,6 +245,14 @@ export default function App() {
         return (
           <LegalPage
             type={currentRoute.type}
+            settings={settings}
+            onNavigate={handleNavigate}
+          />
+        );
+
+      case 'sms-consent':
+        return (
+          <SmsConsentPage
             settings={settings}
             onNavigate={handleNavigate}
           />

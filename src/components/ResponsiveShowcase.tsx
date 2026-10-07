@@ -11,6 +11,7 @@ import {
   Maximize2,
   Sliders,
 } from 'lucide-react';
+import { APP_IMAGES } from '../data/imageAssets';
 
 export const ResponsiveShowcase: React.FC = () => {
   const [activeDevice, setActiveDevice] = useState<'desktop' | 'laptop' | 'tablet' | 'mobile'>('laptop');
@@ -24,7 +25,7 @@ export const ResponsiveShowcase: React.FC = () => {
       resolution: '1920 × 1080 px',
       viewport: 'max-w-4xl aspect-[16/10]',
       icon: Monitor,
-      image: '/src/assets/images/hero_web_design_1790447403727.jpg',
+      image: APP_IMAGES.heroWebDesign,
       features: ['Ultra-wide layout grid', 'Sub-pixel typography scaling', 'Fixed sidebar navigation'],
     },
     laptop: {
@@ -33,7 +34,7 @@ export const ResponsiveShowcase: React.FC = () => {
       resolution: '1440 × 900 px',
       viewport: 'max-w-3xl aspect-[16/10]',
       icon: Laptop,
-      image: '/src/assets/images/portfolio_saas_platform_1790446895410.jpg',
+      image: APP_IMAGES.portfolioSaas,
       features: ['Retina @2x crisp assets', 'Optimal line reading length', 'Micro-interactions enabled'],
     },
     tablet: {
@@ -42,7 +43,7 @@ export const ResponsiveShowcase: React.FC = () => {
       resolution: orientation === 'landscape' ? '1024 × 768 px' : '768 × 1024 px',
       viewport: orientation === 'landscape' ? 'max-w-xl aspect-[4/3]' : 'max-w-md aspect-[3/4]',
       icon: Tablet,
-      image: '/src/assets/images/portfolio_ecommerce_luxury_1790446904601.jpg',
+      image: APP_IMAGES.portfolioEcommerce,
       features: ['Touch gesture navigation', 'Fluid 2-column reflow', 'Adaptive drawer menus'],
     },
     mobile: {
@@ -51,7 +52,7 @@ export const ResponsiveShowcase: React.FC = () => {
       resolution: '393 × 852 px',
       viewport: 'max-w-xs aspect-[9/19]',
       icon: Smartphone,
-      image: '/src/assets/images/portfolio_fintech_portal_1790446913918.jpg',
+      image: APP_IMAGES.portfolioFintech,
       features: ['1-Thumb thumb-zone CTAs', 'Zero layout shifts', 'Instant edge-cached loading'],
     },
   };
@@ -221,7 +222,7 @@ export const ResponsiveShowcase: React.FC = () => {
               <div className="space-y-3 group">
                 <div className="aspect-[16/10] rounded-xl overflow-hidden bg-slate-900 border-2 border-slate-700 shadow-xl group-hover:border-[#0875E1] transition-colors">
                   <img
-                    src="/src/assets/images/hero_web_design_1790447403727.jpg"
+                    src={APP_IMAGES.heroWebDesign}
                     alt="Desktop"
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
@@ -237,7 +238,7 @@ export const ResponsiveShowcase: React.FC = () => {
               <div className="space-y-3 group">
                 <div className="aspect-[16/10] rounded-xl overflow-hidden bg-slate-900 border-2 border-slate-700 shadow-xl group-hover:border-[#0875E1] transition-colors">
                   <img
-                    src="/src/assets/images/portfolio_saas_platform_1790446895410.jpg"
+                    src={APP_IMAGES.portfolioSaas}
                     alt="Laptop"
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
@@ -253,7 +254,7 @@ export const ResponsiveShowcase: React.FC = () => {
               <div className="space-y-3 group">
                 <div className="aspect-[3/4] rounded-xl overflow-hidden bg-slate-900 border-2 border-slate-700 shadow-xl group-hover:border-[#0875E1] transition-colors">
                   <img
-                    src="/src/assets/images/portfolio_ecommerce_luxury_1790446904601.jpg"
+                    src={APP_IMAGES.portfolioEcommerce}
                     alt="Tablet"
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
@@ -269,7 +270,7 @@ export const ResponsiveShowcase: React.FC = () => {
               <div className="space-y-3 group max-w-[200px] mx-auto md:max-w-none">
                 <div className="aspect-[9/19] rounded-xl overflow-hidden bg-slate-900 border-2 border-slate-700 shadow-xl group-hover:border-[#0875E1] transition-colors">
                   <img
-                    src="/src/assets/images/portfolio_fintech_portal_1790446913918.jpg"
+                    src={APP_IMAGES.portfolioFintech}
                     alt="Mobile"
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"

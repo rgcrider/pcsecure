@@ -21,6 +21,7 @@ import {
 } from 'lucide-react';
 import { AppRoute } from '../types';
 import { FluidWave } from './WaveDividers';
+import { APP_IMAGES } from '../data/imageAssets';
 
 interface HeroSectionProps {
   onOpenProjectModal: (serviceName?: string) => void;
@@ -233,7 +234,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     {screenMode === 'preview' && (
                       <>
                         <img
-                          src="/src/assets/images/hero_web_design_1790447403727.jpg"
+                          src={APP_IMAGES.heroWebDesign}
                           alt="Innovative Digital Solutions For Your Business"
                           className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                           referrerPolicy="no-referrer"
@@ -352,7 +353,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   </div>
                   <div className="aspect-[4/3] bg-slate-950 relative">
                     <img
-                      src="/src/assets/images/portfolio_saas_platform_1790446895410.jpg"
+                      src={APP_IMAGES.portfolioSaas}
                       alt="Tablet Preview"
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"
@@ -367,7 +368,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   </div>
                   <div className="aspect-[9/16] bg-slate-950 relative">
                     <img
-                      src="/src/assets/images/portfolio_ecommerce_luxury_1790446904601.jpg"
+                      src={APP_IMAGES.portfolioEcommerce}
                       alt="Mobile Preview"
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"

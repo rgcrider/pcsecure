@@ -108,6 +108,15 @@ export function parseCurrentRoute(): AppRoute {
       return { type: 'disclaimer' };
     }
 
+    if (
+      effectivePath === '/sms-consent' ||
+      effectivePath === '/sms' ||
+      effectivePath === '/sms-communications-consent' ||
+      effectivePath === '/sms-communication-consent'
+    ) {
+      return { type: 'sms-consent' };
+    }
+
     return { type: 'home' };
   } catch {
     return { type: 'home' };
@@ -148,6 +157,8 @@ export function getRoutePath(route: AppRoute): string {
       return '/terms-and-conditions';
     case 'disclaimer':
       return '/disclaimer';
+    case 'sms-consent':
+      return '/sms-consent';
     case 'admin':
       return route.subview ? `/admin/${route.subview}${route.productId ? `/${route.productId}` : ''}` : '/admin';
     default:

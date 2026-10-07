@@ -33,6 +33,7 @@ import {
 } from 'lucide-react';
 import { Product, AppRoute, CompanySettings } from '../types';
 import { HeroSection } from './HeroSection';
+import { APP_IMAGES } from '../data/imageAssets';
 import { BeforeAfterSlider } from './BeforeAfterSlider';
 import { GuaranteeSection } from './GuaranteeSection';
 import { ResponsiveShowcase } from './ResponsiveShowcase';
@@ -155,7 +156,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       category: 'Corporate / Professional Services',
       type: 'corporate',
       metric: 'Lighthouse 99',
-      image: '/src/assets/images/portfolio_saas_platform_1790446895410.jpg',
+      image: APP_IMAGES.portfolioSaas,
       tags: ['Next.js', 'Tailwind', 'Edge CDN'],
     },
     {
@@ -163,7 +164,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       category: 'Retail / Online Store',
       type: 'ecommerce',
       metric: '+142% Sales Lift',
-      image: '/src/assets/images/portfolio_ecommerce_luxury_1790446904601.jpg',
+      image: APP_IMAGES.portfolioEcommerce,
       tags: ['Headless Shopify', 'Stripe', 'Figma Tokens'],
     },
     {
@@ -171,7 +172,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       category: 'SaaS / Technology',
       type: 'saas',
       metric: 'Sub-300ms LCP',
-      image: '/src/assets/images/portfolio_fintech_portal_1790446913918.jpg',
+      image: APP_IMAGES.portfolioFintech,
       tags: ['React SPA', 'TypeScript', 'Analytics'],
     },
     {
@@ -179,7 +180,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       category: 'Food & Hospitality',
       type: 'corporate',
       metric: '100% Mobile Fluid',
-      image: '/src/assets/images/agency_design_process_1790446924152.jpg',
+      image: APP_IMAGES.agencyProcess,
       tags: ['Interactive Menu', 'Reservation CMS', 'SEO'],
     },
   ];
@@ -280,7 +281,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] bg-slate-900">
                   <img
-                    src="/src/assets/images/agency_design_process_1790446924152.jpg"
+                    src={APP_IMAGES.agencyProcess}
                     alt="PCSecure Agency Studio and Collaborative Workspace"
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                     referrerPolicy="no-referrer"
@@ -742,7 +743,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               <div className="lg:col-span-6 relative">
                 <div className="relative rounded-[32px] overflow-hidden shadow-2xl border-4 border-white aspect-[16/10] bg-slate-900">
                   <img
-                    src="/src/assets/images/hero_web_design_1790447403727.jpg"
+                    src={APP_IMAGES.heroWebDesign}
                     alt="High Performance Digital Platform"
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"

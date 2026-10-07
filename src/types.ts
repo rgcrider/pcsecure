@@ -135,6 +135,7 @@ export type AppRoute =
   | { type: 'privacy-policy' }
   | { type: 'terms' }
   | { type: 'disclaimer' }
+  | { type: 'sms-consent' }
   | { type: 'admin'; subview?: 'products' | 'edit' | 'readiness' | 'payments' | 'settings'; productId?: string };
 
 export interface CaseStudy {

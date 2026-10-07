@@ -11,6 +11,7 @@ import {
   Layers,
 } from 'lucide-react';
 import { AppRoute, CompanySettings } from '../types';
+import { APP_IMAGES } from '../data/imageAssets';
 
 interface ProcessPageProps {
   settings: CompanySettings;
@@ -120,7 +121,7 @@ export const ProcessPage: React.FC<ProcessPageProps> = ({
         {/* Studio Process Visual */}
         <div className="relative rounded-2xl overflow-hidden border border-slate-200 bg-slate-900 shadow-xl max-w-5xl mx-auto aspect-[16/9] sm:aspect-[21/9]">
           <img
-            src="/src/assets/images/agency_design_process_1790446924152.jpg"
+            src={APP_IMAGES.agencyProcess}
             alt="PCSecure Engineering and Design Team Studio"
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"

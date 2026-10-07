@@ -12,6 +12,7 @@ import {
 } from 'lucide-react';
 import { CaseStudy, AppRoute, CompanySettings } from '../types';
 import { INITIAL_CASE_STUDIES } from '../data/initialData';
+import { resolveImageUrl } from '../data/imageAssets';
 
 interface PortfolioPageProps {
   settings: CompanySettings;
@@ -78,7 +79,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
               {/* Media Thumbnail with fallback */}
               <div className="relative aspect-[16/10] bg-slate-900 overflow-hidden">
                 <img
-                  src={project.imageUrl}
+                  src={resolveImageUrl(project.imageUrl)}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   referrerPolicy="no-referrer"
@@ -208,7 +209,7 @@ export const PortfolioPage: React.FC<PortfolioPageProps> = ({
               {/* Media Preview */}
               <div className="aspect-[16/9] w-full rounded-xl overflow-hidden bg-slate-900">
                 <img
-                  src={selectedCaseStudy.imageUrl}
+                  src={resolveImageUrl(selectedCaseStudy.imageUrl)}
                   alt={selectedCaseStudy.title}
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"

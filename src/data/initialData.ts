@@ -1,4 +1,5 @@
 import { Product, CompanySettings, CaseStudy, BlogPost } from '../types';
+import { APP_IMAGES } from './imageAssets';
 
 export const INITIAL_COMPANY_SETTINGS: CompanySettings = {
   companyName: 'PCSecure',
@@ -1124,7 +1125,7 @@ export const INITIAL_CASE_STUDIES: CaseStudy[] = [
       'Self-Service Customer Billing & Stripe Customer Portal',
     ],
     techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'Stripe API'],
-    imageUrl: '/src/assets/images/portfolio_saas_platform_1790446895410.jpg',
+    imageUrl: APP_IMAGES.portfolioSaas,
     liveUrl: 'https://apexcloud.example.com',
     testimonial: {
       quote:
@@ -1158,7 +1159,7 @@ export const INITIAL_CASE_STUDIES: CaseStudy[] = [
       'Automated Cart Recovery & Klaviyo Email Sequencing',
     ],
     techStack: ['React', 'TypeScript', 'Shopify Storefront API', 'Tailwind CSS', 'Edge Functions'],
-    imageUrl: '/src/assets/images/portfolio_ecommerce_luxury_1790446904601.jpg',
+    imageUrl: APP_IMAGES.portfolioEcommerce,
     liveUrl: 'https://auraatelier.example.com',
     testimonial: {
       quote:
@@ -1192,7 +1193,7 @@ export const INITIAL_CASE_STUDIES: CaseStudy[] = [
       'Multi-Role Permissions (Client, Advisor, Auditor)',
     ],
     techStack: ['React', 'TypeScript', 'Node.js', 'Tailwind CSS', 'WebSockets', 'AWS KMS'],
-    imageUrl: '/src/assets/images/portfolio_fintech_portal_1790446913918.jpg',
+    imageUrl: APP_IMAGES.portfolioFintech,
     liveUrl: 'https://vanguardportal.example.com',
     testimonial: {
       quote:
@@ -1226,7 +1227,7 @@ export const INITIAL_CASE_STUDIES: CaseStudy[] = [
       'Localized Search Engine Optimization (SEO) Architecture',
     ],
     techStack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Algolia Search'],
-    imageUrl: '/src/assets/images/agency_design_process_1790446924152.jpg',
+    imageUrl: APP_IMAGES.agencyProcess,
     liveUrl: 'https://beaconhealth.example.com',
     testimonial: {
       quote:
